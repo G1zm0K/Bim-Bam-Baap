@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Random Word Button</title>
+  <style>
+    #container {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    #letter {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    #button {
+      display: block;
+      margin: 0 auto;
+      padding: 30px;
+      font-size: 36px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: opacity 0.5s ease-in-out;
+    }
+    #button.hide {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <p id="letter"></p>
+    <button id="button" onclick="changeText()">Begin te baapen</button>
+  </div>
+  <script>
+    var words = [];
+    var usedWords = [];
+    var buttonClicked = false; // flag variable to track if the button has been clicked
+
+    // load the list of words from a separate file
+    fetch("words.txt")
+      .then(response => response.text())
+      .then(data => {
+        words = data.split("\n").filter(word => word.length > 0);
+      });
+
+    // generate a random letter when the page loads
+    var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var randomLetter = letters.charAt(Math.floor(Math.random() * letters.length));
+    var letterElement = document.getElementById("letter");
+    letterElement.innerHTML = randomLetter;
+
+    function changeText() {
+      // hide the letter element if this is the first button click
+      if (!buttonClicked) {
+        var letterElement = document.getElementById("letter");
+        letterElement.style.display = "none";
+        buttonClicked = true;
+      }
+
+      // select a random word from the list
+      var randomIndex = Math.floor(Math.random() * words.length);
+      var randomWord = words[randomIndex];
+
+      // add the word to the used words list and remove it from the available words list
+      usedWords.push(randomWord);
+      words.splice(randomIndex, 1);
+
+      // if all words have been used, reset the available words list
+      if (words.length === 0) {
+        words = usedWords;
+        usedWords = [];
+      }
+
+      // add a class to the button to trigger the fade-out animation
+      var buttonElement = document.getElementById("button");
+      buttonElement.classList.add("hide");
+
+      // update the button text with the random word after a short delay to allow the fade-out animation to complete
+      setTimeout(function() {
+        buttonElement.innerHTML = randomWord;
+
+        // remove the class to trigger the fade-in animation
+        buttonElement.classList.remove("hide");
+      }, 500);
+    }
+  </script>
+</body>
+</html>
+
