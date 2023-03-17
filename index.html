@@ -53,10 +53,10 @@
       });
 
     // generate a random letter when the page loads
-    var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var letters = "ABCDEFGHIJKLMNOPRSTUVW";
     var randomLetter = letters.charAt(Math.floor(Math.random() * letters.length));
     var letterElement = document.getElementById("letter");
-    letterElement.innerHTML = "Eerste letter: " + randomLetter;
+    letterElement.innerHTML = randomLetter;
 
     function changeText() {
       // hide the letter element if this is the first button click
