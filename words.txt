@@ -1,7 +1,7 @@
 Een personage uit een boek/film
 Een boek/cartoon/strip
 Een film
-Een personage uit een videospe
+Een personage uit een videospel
 Een term uit een videospel
 Een videospel
 Een Pokemon
@@ -55,3 +55,12 @@ Een baan
 Een sportclub
 Iets sportgerelateerds
 Een reeds overleden persoon
+
+Een dispuut/jaarclub
+Een type drugs
+Iets baapgerelateerds
+Een drankmerk
+Een lied/nummer
+Een studierichting
+Een wereldleider
+Een soort materiaal/element
