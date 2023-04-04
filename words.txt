@@ -59,7 +59,7 @@ Een reeds overleden persoon
 Een dispuut/jaarclub
 Een type drugs
 Iets baapgerelateerds
-Een drankmerk
+Een drankje
 Een lied/nummer
 Een studierichting
 Een wereldleider
@@ -81,3 +81,10 @@ Een instrument
 Iets dat je op school kan vinden
 Iets warms\heets
 Iets plakkerigs
+Iets eetbaars
+Iets drinkbaars
+Iets roods
+Iets blauws
+Iets geels
+Iets duns
+Iets hoogs
