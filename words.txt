@@ -54,7 +54,7 @@ Iets uit de mythologie
 Een baan
 Een sportclub
 Iets sportgerelateerds
-Een reeds overleden persoon
+Een overleden persoon
 
 Een dispuut/jaarclub
 Een type drugs
@@ -71,7 +71,7 @@ Een voetballer
 Dingen die je in een bouwmarkt kan kopen
 Dingen die je in een winkelcentrum kan kopen
 Een computer term
-Een zeedieren
+Een zeedier
 Een zoogdier
 Een dier met 4 poten
 Een voertuig
@@ -90,3 +90,4 @@ Iets duns
 Iets hoogs
 Wie dit leest trekt een bak
 Iets wat je verder dan 10 meter kan schoppen
+Een k*nker lijer
